@@ -1,16 +1,16 @@
 class Shoe
-  attr_accessor :author, :page_count, :genre
-
-  def initialize(title)
-    @title = title
+  def initialize(brand)
+    @brand = brand
   end
 
-  def title
-    @title
-  end
+  attr_reader :brand
+  attr_accessor :color, :size, :material, :condition
 
-  def turn_page
-    puts "Flipping the page...wow, you read fast!"
+  def cobble()
+    self.condition = "new"
+    puts "Your shoe is as good as new!"
   end
 
 end
+
+Shoe.new("Nike")
